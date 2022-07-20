@@ -68,7 +68,7 @@ object Effects {
   }).flatMap { num =>
     MyIO(() => num + 1)
   }
-
+  
   def main(args: Array[String]): Unit = {
     val value = ioWithSideEffects.unsafeRun()
     println(value)
